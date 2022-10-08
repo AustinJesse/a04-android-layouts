@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/grey_200">
+    android:layout_height="match_parent">
 
-    <!-- TODO 01. Define the layout for the MainActivity here. -->
-    <!-- NOTE: Remember that in order to include some GUI components you will have to use the Material library -->
+    <ScrollView
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/scanButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scan"
-        android:theme="@style/Chip.Blue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/country_description_text" />
+        <!-- TODO 01. Define the layout for the MainActivity here. -->
+        <!-- NOTE: Remember that in order to include some GUI components you will have to use the Material library -->
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test" />
+
+        <Button
+            android:id="@+id/scanButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:text="Scan"
+            android:theme="@style/Chip.Blue"
+            tools:layout_editor_absoluteX="134dp"
+            tools:layout_editor_absoluteY="186dp" />
+    </ScrollView>
 
 </ScrollView>
